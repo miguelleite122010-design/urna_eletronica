@@ -1,0 +1,31 @@
+package urna;
+
+import javax.swing.JOptionPane;
+
+public class eleicao {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int votos [] = new int [10];
+		int jose = 0, maria = 0, juca = 0;
+		
+		for (int i = 0; i < 10; i++) {
+			Integer.parseInt(JOptionPane.showInputDialog("Eleitor " + (i + 1) + " vote: 1 para jose, 2 para maria e 3 para juca.1"));
+          if (votos[i] == 1) { jose++; }
+          if (votos[i] == 2) { maria++; }
+          if (votos[i] == 1) { juca++; }
+	}
+          if (jose > maria && jose >juca) {
+        	  Integer.parseInt(JOptionPane.showInputDialog("jose ganhou!"));
+          }
+          else if (maria > jose && maria >juca) {
+            	  Integer.parseInt(JOptionPane.showInputDialog("maria ganhou!"));
+          }
+          if (juca > maria && juca >jose) {
+                	  Integer.parseInt(JOptionPane.showInputDialog("jose ganhou!"));
+          }
+          
+    	  Integer.parseInt(JOptionPane.showInputDialog("jose teve " + jose + " votos, maria teve " + maria + " votos e juca teve " + juca) + " votos");
+}
+}
